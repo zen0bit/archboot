@@ -65,8 +65,6 @@ _settings() {
     done
 
     # Password
-    until [[ ${#i} -ge 8 && "$i" == *[a-z]* && "$i" == *[0-9]* ]]; do
-    _note "password should be at least 8 chars long with 1 letter and 1 digit"
     _prompt "Enter password for root:"
     read -s i
     done
@@ -220,11 +218,11 @@ _install_base() {
     echo -e "==> Setting hostname..." && sleep 2s
     echo $HOST_name > /etc/hostname
     echo -e "==> Setting and generating locale..." && sleep 2s
-    echo "fr_FR.UTF-8 UTF-8" >> /etc/locale.gen && locale-gen
-    export LANG=fr_FR.UTF-8
-    echo "LANG=fr_FR.UTF-8" > /etc/locale.conf
+    echo "cs_CZ.UTF-8 UTF-8" >> /etc/locale.gen && locale-gen
+    export LANG=cs_CZ.UTF-8
+    echo "LANG=cs_CZ.UTF-8" > /etc/locale.conf
     echo -e "==> Setting keyboard..." && sleep 2s
-    echo "KEYMAP=fr-pc" > /etc/vconsole.conf
+    echo "KEYMAP=cs" > /etc/vconsole.conf
     echo -e "==> Setting Linux environment..." && sleep 2s
     mkinitcpio -p linux
     echo -e "==> Installing network..." && sleep 2s
