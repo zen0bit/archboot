@@ -1,6 +1,8 @@
 ![](http://i.imgur.com/z4nv4Kj.png)
 
-**Install ArchLinux the way i like [FR]**
+**Install ArchLinux the way i like [CZ]**
+In czech language
+Prostě česky
 
 ## Requirements
 
@@ -16,11 +18,11 @@ The only thing you need is an USB bootable device of ArchLinux, you can create i
 
 **1. Boot your computer with the USB bootable device and run :**
 
-`wget https://raw.githubusercontent.com/grm34/archboot/master/install_arch && sh install_arch`
+`wget https://raw.githubusercontent.com/zen0bit/archboot/master/install_arch && sh install_arch`
 
 **2. After reboot, for full desktop environment (KDE Plasma), login and run :**
 
-`wget https://raw.githubusercontent.com/grm34/archboot/master/install_kde && sh install_kde`
+`wget https://raw.githubusercontent.com/zen0bit/archboot/master/install_kde && sh install_kde`
 
 ## Notes
 
