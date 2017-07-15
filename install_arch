@@ -218,11 +218,11 @@ _install_base() {
     echo -e "==> Setting hostname..." && sleep 2s
     echo $HOST_name > /etc/hostname
     echo -e "==> Setting and generating locale..." && sleep 2s
-    echo "cs_CZ.UTF-8 UTF-8" >> /etc/locale.gen && locale-gen
+    echo nano /etc/locale.gen && locale-gen
     export LANG=cs_CZ.UTF-8
-    echo "LANG=cs_CZ.UTF-8" > /etc/locale.conf
+    echo nano /etc/locale.conf
     echo -e "==> Setting keyboard..." && sleep 2s
-    echo "KEYMAP=cs" > /etc/vconsole.conf
+    echo nano /etc/vconsole.conf
     echo -e "==> Setting Linux environment..." && sleep 2s
     mkinitcpio -p linux
     echo -e "==> Installing network..." && sleep 2s
