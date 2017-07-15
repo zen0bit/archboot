@@ -58,18 +58,12 @@ _warning() {
 _settings() {
 
     # Username
-    until [[ ${#USER_name} -ge 3 \
-    && ${USER_name} =~ ^[a-zA-Z0-9][-a-zA-Z0-9_]+$ ]]; do
     _prompt "Enter Username (ex: johnny):"
     read USER_name
-    done
 
     # Password
-    until [[ ${#i} -ge 8 && "$i" == *[a-z]* && "$i" == *[0-9]* ]]; do
-    _note "password should be at least 8 chars long with 1 letter and 1 digit"
     _prompt "Enter password for ${USER_name}:"
     read -s i
-    done
     _prompt "Confirm password for ${USER_name}:"
     read -s USER_passwd
     if [[ ${USER_passwd} != ${i} ]]; then
@@ -217,8 +211,8 @@ _install_packages() {
     hunspell-fr flashplayer
 
     # Cups & scan
-    _info "Installing Cups & scan support"
-    pacman --noconfirm -S cups cups-pdf skanlite
+    #_info "Installing Cups & scan support"
+    #pacman --noconfirm -S cups cups-pdf skanlite
 }
 
 _install_settings() {
