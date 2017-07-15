@@ -140,7 +140,6 @@ _mount_part() {
         mount /dev/$_disk${part_order[1]} /mnt/boot
     fi
     swapon /dev/$_disk${part_order[2]}
-    mount /dev/$_disk${part_order[4]} /mnt/home
 }
 
 #################
